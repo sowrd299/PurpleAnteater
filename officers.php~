@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/officers.css">
+
+</head>
+
+<body>
+
+    <?php include 'res/bar.php';?>
+
+    <div style="margin-left:10%; margin-top:10%; color:#ffffff;"></div>
+
+    <div class="wrapper">
+
+        <font style="color:#ffffff;" size="10"><strong>Administration</strong></font>
+
+        <div class="ocontent">
+          <div class="content-box-portrait">
+              <img class="size-medium wp-image-442695" src="http://vgdc-uci.com/wp-content/uploads/2013/04/edwin-300x300.jpg" alt="edwin" width="128" height="128" />
+          </div>
+            <font size="6"><b>President</b><br/>Edwin Ho</font>
+        </div>
+
+        <div class="ocontent">
+            <div class="content-box-portrait">
+                <img class="size-medium wp-image-442695" src="http://vgdc-uci.com/wp-content/uploads/2013/04/chris-p-300x300.jpg" alt="No Photo" width="128" height="128" />
+            </div>
+            <font size="6"><b>Vice President</b><br/>Chris Peterson</font>
+        </div>
+
+        <div class="ocontent">
+            <div class="content-box-portrait">
+                <img class="size-medium wp-image-442695" src="http://vgdc-uci.com/wp-content/uploads/2013/04/jordan-300x300.jpg" alt="No Photo" width="128" height="128" />
+            </div>
+            <font size="6"><b>Community Manager</b><br/>Jordan Rodriguez</font>
+        </div>
+
+    </div>
+
+    <div class="wrapper">
+
+        <font style="color:#ffffff;" size="10"><strong>Outreach</strong></font>
+
+        <div class="ocontent">
+            <div class="content-box-portrait">
+                <img class="size-medium wp-image-442695" src="http://vgdc-uci.com/wp-content/uploads/2013/04/sara-300x300.jpg" alt="No Photo" width="128" height="128" />
+            </div>
+            <font size="6"><b>Outreach Director</b><br/>Sarah Chen</font>
+        </div>
+
+    </div>
+
+    <div class="wrapper">
+
+        <font style="c X_bar - z*sigma/root(n), X_bar + z*sigma/root(n)olor:#ffffff;" size="10"><strong>Programming</strong></font>
+
+        <div class="ocontent">
+            <div class="content-box-portrait">
+                <img class="size-medium wp-image-442695" src="http://vgdc-uci.com/wp-content/uploads/2013/04/derek-300x290.jpg" alt="No Photo" width="128" height="128" />
+            </div>
+            <font size="6"><b>Programming Director</b><br/>Derek Edrich</font>
+        </div>
+        
+        <div class="ocontent">
+            <div class="content-box-portrait">
+                <img class="size-medium wp-image-442695" src="http://vgdc-uci.com/wp-content/uploads/2013/04/brad-300x300.jpg" alt="No Photo" width="128" height="128" />
+            </div>
+            <font size="6"><b>Programming Officer</b><br/>Brad Guerrero</font>
+        </div>
+        
+        <div class="ocontent">
+            <div class="content-box-portrait">
+                <img class="size-medium wp-image-442695" src="http://vgdc-uci.com/wp-content/uploads/2013/04/john-c-300x300.jpg" alt="No Photo" width="128" height="128" />
+            </div>
+            <font size="6"><b>Programming Officer</b><br/>John Collins</font>
+        </div>
+
+    </div>
+
+    <div class="wrapper">
+
+        <font style="color:#ffffff;" size="10"><strong>Design</strong></font>
+
+        <div class="ocontent">
+            <div class="content-box-portrait">
+                <img class="size-medium wp-image-442695" src="http://vgdc-uci.com/wp-content/uploads/2013/04/Josh-Wardlaw-300x300.jpg" alt="No Photo" width="128" height="128" />
+            </div>
+            <font size="6"><b>Design Director</b><br/>Joshua Wardlaw</font>
+        </div>
+
+        <div class="ocontent">
+            <div class="content-box-portrait">
+                <img class="size-medium wp-image-442695" src="http://vgdc-uci.com/wp-content/uploads/2013/04/roldan-300x300.jpg" alt="No Photo" width="128" height="128" />
+            </div>
+            <font size="6"><b>Design Officer</b><br/>Roldan Gammad</font>
+        </div>    
+
+        <div class="ocontent">
+            <div class="content-box-portrait">
+                <img class="size-medium wp-image-442695" src="http://vgdc-uci.com/wp-content/uploads/2013/04/ryan-294x300.jpg" alt="No Photo" width="128" height="128" />
+            </div>
+            <font size="6"><b>Design Officer</b><br/>Ryan N. Ward</font>
+        </div>    
+     
+    </div>
+
+    <div class="wrapper">
+
+        <font style="color:#ffffff;" size="10"><strong>Art</strong></font>
+
+        <div class="ocontent">
+            <div class="content-box-portrait">
+                <img class="size-medium wp-image-442695" src="http://vgdc-uci.com/wp-content/uploads/2013/04/Daniel-Cheng-300x300.jpg" alt="No Photo" width="128" height="128" />
+            </div>
+            <font size="6"><b>Art Director</b><br/>Daniel Cheng</font>
+        </div>
+
+        <div class="ocontent">
+            <div class="content-box-portrait">
+                <img class="size-medium wp-image-442695" src="http://vgdc-uci.com/wp-content/uploads/2013/04/tina-300x300.jpg" alt="No Photo" width="128" height="128" />
+            </div>
+            <font size="6"><b>Art Officer</b><br/>Tina Feng</font>
+        </div>
+
+    </div>
+        
+    <div class="wrapper">
+
+        <font style="color:#ffffff;" size="10"><strong>Production</strong></font>
+
+        <div class="ocontent">
+            <div class="content-box-portrait">
+                <img class="size-medium wp-image-442695" src="http://vgdc-uci.com/wp-content/uploads/2013/04/matt-300x300.jpg" alt="No Photo" width="128" height="128" />
+            </div>
+            <font size="6"><b>Production Director</b><br/>Matthew Berg-Johnsen</font>
+        </div>
+
+        <div class="ocontent">
+            <div class="content-box-portrait">
+                <img class="size-medium wp-image-442695" src="http://vgdc-uci.com/wp-content/uploads/2013/04/jacob-300x298.jpg" alt="No Photo" width="128" height="128" />
+            </div>
+            <font size="6"><b>Production Officer</b><br/>Jacob Mikesell</font>
+        </div>
+
+    </div>
+
+    <div class="wrapper">
+
+        <font style="color:#ffffff;" size="10"><strong>Writing</strong></font>
+
+        <div class="ocontent">
+            <div class="content-box-portrait">
+                <img class="size-medium wp-image-442695" src="http://vgdc-uci.com/wp-content/uploads/2013/04/jordan-300x300.jpg" alt="No Photo" width="128" height="128" />
+            </div>
+            <font size="6"><b>Writing Director</b><br/>Jordan Rodriguez</font>
+        </div>
+
+        <div class="ocontent">
+            <div class="content-box-portrait">
+                <img class="size-medium wp-image-442695" src="http://vgdc-uci.com/wp-content/uploads/2013/04/shaun-300x300.jpg" alt="No Photo" width="128" height="128" />
+            </div>
+            <font size="6"><b>Writing Officer</b><br/>Shaun Reid</font>
+        </div>
+        
+    </div>
+
+    <div class="wrapper">
+
+        <font style="color:#ffffff;" size="10"><strong>Audio</strong></font>
+
+        <div class="ocontent">
+            <div class="content-box-portrait">
+                <img class="size-medium wp-image-442695" src="http://vgdc-uci.com/wp-content/uploads/2013/04/brandon-300x300.jpg" alt="No Photo" width="128" height="128" />
+            </div>
+            <font size="6"><b>Audio Director</b><br/>Brandon Delehoy</font>
+        </div>
+        
+        <div class="ocontent">
+            <div class="content-box-portrait">
+                <img class="size-medium wp-image-442695" src="http://vgdc-uci.com/wp-content/uploads/2013/04/adi-286x300.jpg" alt="No Photo" width="128" height="128" />
+            </div>
+            <font size="6"><b>Audio Officer</b><br/>Aditya Iyer</font>
+        </div>
+
+    </div>
+
+    <?php include 'res/foot.php';?>
+    
+</body>
+
+</html>

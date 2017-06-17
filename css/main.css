@@ -1,0 +1,94 @@
+body{
+    background: #000000;
+    font-family: "Helvetica", sans-serif;
+}
+
+.title_img { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.wrapper{
+    color: #ffffff;
+    background: #444444;
+    padding: 20px 20px;
+    margin-left: 64px;
+    margin-right: 64px;
+    margin-bottom: 32px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.content{
+    color: #000000;
+    background: #ffffff;
+    margin-top: 20px;
+    padding: 16px 16px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.links{
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;                  /* establish flex container */
+    flex-direction: row;            /* default value; can be omitted */
+    flex-wrap: nowrap;              /* default value; can be omitted */
+    //justify-content: space-between;
+}
+
+.link_img {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    margin-right: 8px;
+}
+
+.link_text{
+    color: #ffffff;Video Game Development Club @ UCI
+    text-decoration: none;
+    margin-right: 8px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.header-text {
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.content-box{
+    /*flex code from http://stackoverflow.com/questions/2603700/how-to-align-3-divs-left-center-right-inside-another-div*/
+    display: flex;                  /* establish flex container */
+    flex-direction: row;            /* default value; can be omitted */
+    flex-wrap: nowrap;              /* default value; can be omitted */
+    //justify-content: space-between; /* switched from default (flex-start, see below) */
+    color: #000000;
+    background: #ffffff;
+    margin-top: 20px;
+    padding: 32px 16px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.content-box-portrait {
+    display: inline-block;
+    padding: 0px 64px;
+}
+
+.content-box-text {
+    display: inline-block;
+}
+
+/* headers within content-box-text elements */
+.content-box-text h1 {
+    font-weight: bold;
+}

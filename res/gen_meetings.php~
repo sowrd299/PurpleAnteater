@@ -1,0 +1,59 @@
+<?php
+
+/*
+ * Presents the quarter's general meetings
+ * Indicated the current and past meettings
+ */
+
+echo('<!--TEST: Starting 1-->');
+
+include 'lib.php';
+
+function disp_gen_meetings($con){
+
+    //TODO: insert error handling
+
+    //set up the prepared statement
+    $stmt = $con->prepare("SELECT week, topic, date FROM gen_meetings ORDER BY date ASC"); 
+    $stmt->execute(); 
+
+    //init vars
+    $today = date('Y-m-d');
+    $prev = True; //tracks if before the current date
+
+    echo('<!--TEST: Stament prepared.-->'); // <testing/>
+
+    //print the meetings
+	echo('<div>');
+
+    $stmt->bind_result($week, $topic, $day);
+    while($stmt->fetch()){
+        echo('<!--TEST: '.$today.' '.date('Y-m-d', strtotime($day)).'-->');
+		echo('<span style="');
+		//style based on time
+        if($prev && (date('Y-m-d', strtotime($day)) >= $today) ){
+            //next meeting
+            echo('font-weight: bold;');
+            $prev = False;
+        }elseif($prev){
+            //past meetings
+            echo('text-decoration: line-through;');
+        }
+        //future meetings recieve not special formatting
+		echo('">Week '.$week.': '.$topic.'</span></br>');
+	}
+	echo('</div>');
+
+    //cleanup
+    $stmt->close();
+}
+
+echo('<!--TEST: Starting 2-->'); // <testing/>
+
+$con = sql_connect();
+disp_gen_meetings($con);
+$con->close();
+	
+?>
+
+

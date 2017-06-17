@@ -1,0 +1,77 @@
+.bar{
+    padding: 0px 16px; //get padding from button margin; helps expand mouse-over zone for dropdown
+    color: #e0e0e0;
+    background: #5000d0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown_button{
+    display: block;
+    margin: 8px 2px;
+    padding: 4px 16px;
+    background: #5000d0; /*should match bar*/
+    color: #ffffff;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.dropdown_content{
+    display: none;
+    position: absolute;
+    background-color: #d0d0d0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+    z-index: 1;
+    border-style: solid;
+    border-color: #5000d0; /*should match bar*/
+    border-width: 0px 0px 4px 0px; 
+}
+
+.dropdown_link{
+    display: block;
+    padding: 8px 32px;
+    color: #000000;
+}
+
+.dropdown_link:nth-child(even){
+    background: #e0e0e0; 
+}
+
+.dropdown:hover .dropdown_content{
+    display: block;
+}
+
+.dropdown:hover .dropdown_button{
+    background: #a020ff;
+}
+
+.dropdown_link:hover{
+    background: #505050;
+    color: #ffffff;
+}
+
+.bar a:link{
+    text-decoration: none;
+}
+
+.bar a:visited{
+    text-decoration: none;
+}
+
+.bar a:hover{
+    text-decoration: none;
+}
+
+.bar a:active{
+    text-decoration: none;
+}

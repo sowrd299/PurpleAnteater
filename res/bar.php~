@@ -1,0 +1,17 @@
+<link rel="stylesheet" type="text/css" href="css/bar.css"> 
+
+<div class="bar">
+    <div class="dropdown">
+        <a class="dropdown_button" href="home.php">
+            <b>HOME</b>
+        </a>
+    </div>
+    <div class="dropdown">
+        <a class="dropdown_button" href="about.php">
+            <b>ABOUT</b>
+        </a>
+        <div class="dropdown_content">
+            <a href="officers.php" class="dropdown_link">Officers</a>
+        </div>
+    </div>
+</div>

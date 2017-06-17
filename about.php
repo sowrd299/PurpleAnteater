@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- this is a test of sftp -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Video Game Development Club</title>
+</head>
+
+<body>
+    <?php include 'res/bar.php'?>
+    <div style="margin-top:10%;"></div>
+    <div class="wrapper">
+        <div class="content">
+            <h3>Video Game Development Club @ UCI</h3>
+            <p>The Video Game Development Club (VGDC) here at UC Irvine gives students the opportunity to break into the industry by challenging what is expected of aspiring game developers. We devote ourselves to building our members’ technical expertise, creating successful portfolios, and establishing a professional network with other game developers that give our members an edge when seeking to enter the game industry.</p>
+            <h3>Meeting information (Spring 2017):</h3>
+            <p>TBD</p>
+            <h3>Who are we?</h3>
+            <p>The Video Game Development Club is made up of students, alumni, and industry professionals who are looking to give the students of UC Irvine a leg up in a competitive marketplace by allowing them to learn firsthand the skills they will be expected to know as game developers; these skills apply to aspiring artists, programmers, writers, designers, and producers. Officers in the Game Development Club have worked for AAA game companies in the past, such as Blizzard Entertainment, GameSpy Industries, and Obsidian Entertainment.</p>
+            <h3>What do we do?</h3>
+            <p>The primary objective of the Game Development Club at UCI is to provide students with tangible products they can then present in their portfolios and demo reels when applying for jobs post-graduation.  As a club, we believe that all the teaching in the world can’t compare to a working prototype, mod, or finished game in the hands of a potential employer.  It demonstrates not only the student’s knowledge, but their adaptability, their determination to see a project through, and their willingness to cooperate and work in a team.</p>
+            <p>Students are encouraged to come up with ideas, brainstorm them with a team, and arrange talent to help make it happen.  Whether it’s building a new game from scratch or creating a mod off of popularly-available engines like Unreal or Source, students are assisted by club officers with real-world knowledge of how the game industry works, what will be expected of them as professionals, and how to tune their work to that level.</p>
+            <h3>How do I join?</h3>
+            <P>There is no official process or fee - simply attend as many or as few of our events as you'd like, and you're a member! If you'd like to keep up to date, join our Facebook group and/or subscribe to our newsletter.</p>
+            <h3>Why else should you join?</h3>
+            <p>Beyond project management and content creation, the Video Game Development Club at UC Irvine has many educational resources.  Industry luminaries from such companies as Insomniac Games and Blizzard Entertainment come by every quarter to impart their knowledge on the attending students, and every year the club takes a tour of an actual game company’s offices, witnessing firsthand the effort and dedication that goes into making their favorite games.</p>
+        </div>
+        <!-- Begin MailChimp Signup Form -->
+        <div class=content>
+            <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+            <div id="mc_0mbed_signup">
+                <form action="//uci.us6.list-manage.com/subscribe/post?u=8b3da0f5e9544de8bd07adff6&amp;id=b5b4f0c795" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                        <h2>Subscribe to our mailing list</h2>
+                        <div class="mc-field-group">
+                            <label for="mce-EMAIL">Email Address  <span class="asterisk" style="color: red;">*</span> </label>
+                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                        </div>
+                        <div class="mc-field-group">
+                            <label for="mce-FNAME">First Name </label>
+                            <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+                        </div>
+                        <div class="mc-field-group">
+                            <label for="mce-LNAME">Last Name </label>
+                            <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+                        </div>
+                        <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_8b3da0f5e9544de8bd07adff6_b5b4f0c795" tabindex="-1" value=""></div>
+                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                    </div>
+                    <div class="indicates-required" style="color: red;"><span class="asterisk">*</span> indicates required</div>
+            </form>
+        </div>
+        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+        </div>
+        <!--End mc_embed_signup-->
+        <!-- Other Links -->
+        <div class="links">
+            <div class="link"><a href="https://uci-vgdc.itch.io/"><img src="img/itchio.jpg" class="link_img"><span class="link_text">itch.io</span></a></div>
+            <div class="link"><a href="https://www.facebook.com/groups/vgdcuci/"><img src="img/fb.png" class="link_img"><span class="link_text">Facebook</span></a></div>
+        </div>
+        <!-- End Other Links -->
+    </div>
+    
+    <?php include 'res/foot.php';?>
+
+</body>
+
+</html> 

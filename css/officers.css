@@ -1,0 +1,24 @@
+.ocontent{
+    /*flex code from http://stackoverflow.com/questions/2603700/how-to-align-3-divs-left-center-right-inside-another-div*/
+    display: flex;                  /* establish flex container */
+    flex-direction: row;            /* default value; can be omitted */
+    flex-wrap: nowrap;              /* default value; can be omitted */
+    //justify-content: space-between; /* switched from default (flex-start, see below) */
+    color: #000000;
+    background: #ffffff;
+    margin-top: 20px;
+    padding: 32px 16px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.odept{
+    color: #ffffff;
+    background: #444444;
+    padding: 108px 128px;
+    margin-top: 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
