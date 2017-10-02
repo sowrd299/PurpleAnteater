@@ -45,7 +45,13 @@ function disp_workshops($con){
 		echo('"><span>'.$department.': '.$name.'</span></br>');
         echo('<span>'.date('l',strtotime('Sunday + '.$weekday.' Days')).' from '.date('g:i',strtotime($start_time)).' to '.date('g:i',strtotime($end_time)));
         echo('</span></div>');
-	}
+    }
+    
+    //handle an empty list
+    if($first){
+        echo("<p><i>There are currently no workshops scheduled for this week.</i></p>");
+    }
+
 	echo('</div>');
 
     //cleanup

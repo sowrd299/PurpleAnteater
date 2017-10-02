@@ -28,10 +28,12 @@ function set_gen_meetings($con, $count){
 
 }
 
-$con = sql_connect();
-set_gen_meetings($con, NUM_MEETINGS);
-$con->close();
-echo('<p>Datebase Updated</p>');
-include_once '../res/gen_meetings.php';
+if($_SESSION['loading']){
+    $con = sql_connect();
+    set_gen_meetings($con, NUM_MEETINGS);
+    $con->close();
+    echo('<p>Datebase Updated</p>');
+    include_once '../res/gen_meetings.php';
+}
 
 ?>

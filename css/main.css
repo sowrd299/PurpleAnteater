@@ -3,6 +3,7 @@ body{
     font-family: "Helvetica", sans-serif;
 }
 
+/*the main image with the logo on the homepage*/
 .title_img { 
     display: block;
     margin-left: auto;
@@ -10,6 +11,7 @@ body{
     width: 100%;
 }
 
+/*a grey mat to put around content*/
 .wrapper{
     color: #ffffff;
     background: #444444;
@@ -17,11 +19,13 @@ body{
     margin-left: 64px;
     margin-right: 64px;
     margin-bottom: 32px;
+    overflow: hidden;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
 
+/*a white box to hold one element of content*/
 .content{
     color: #000000;
     background: #ffffff;
@@ -40,7 +44,7 @@ body{
     display: flex;                  /* establish flex container */
     flex-direction: row;            /* default value; can be omitted */
     flex-wrap: nowrap;              /* default value; can be omitted */
-    //justify-content: space-between;
+    /*justify-content: space-between;/**/
 }
 
 .link_img {
@@ -51,7 +55,7 @@ body{
 }
 
 .link_text{
-    color: #ffffff;Video Game Development Club @ UCI
+    color: #ffffff; /* Video Game Development Club @ UCI */
     text-decoration: none;
     margin-right: 8px;
     margin-right: 8px;
@@ -64,12 +68,13 @@ body{
     font-weight: bold;
 }
 
+/*a horizonatlly formated verstion of content*/
 .content-box{
     /*flex code from http://stackoverflow.com/questions/2603700/how-to-align-3-divs-left-center-right-inside-another-div*/
     display: flex;                  /* establish flex container */
     flex-direction: row;            /* default value; can be omitted */
     flex-wrap: nowrap;              /* default value; can be omitted */
-    //justify-content: space-between; /* switched from default (flex-start, see below) */
+    /* justify-content: space-between; /* switched from default (flex-start, see below) */
     color: #000000;
     background: #ffffff;
     margin-top: 20px;
@@ -78,6 +83,8 @@ body{
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
+
+/*things to go in content boxes:*/
 
 .content-box-portrait {
     display: inline-block;

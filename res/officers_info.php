@@ -28,7 +28,7 @@ function disp_officers($con)
 	while($stmt->fetch())
 	{
 		if ($previous != $department)
-			echo('<div class="header-text"><strong>'.$depart[$department].'</strong></div>');
+			echo('<p><div class="header-text"><strong>'.$depart[$department].'</strong></div></p>');
 
 		echo('<div class="ocontent">');
         echo('<div class="content-box-portrait">');

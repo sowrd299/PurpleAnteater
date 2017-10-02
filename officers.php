@@ -21,6 +21,12 @@
         <?php include 'res/officers_info.php';?>
 
     </div>
+    
+    <div class="wrapper">
+        <div class="content">.
+            <p>Our board of officers is joined by a beloved group of Lab Officers, who help us keep the Game Lab open.</p>
+        </div>
+    </div>
 
     <?php include 'res/foot.php';?>
     

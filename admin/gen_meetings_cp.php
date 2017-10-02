@@ -9,7 +9,7 @@ function disp_gen_meetings_cp($count){
     /* count: number of weekly general meetings in the quarter
      */
 
-    echo('<form method="post" action="/vgdc-uci/admin/gen_meetings_set.php">');
+    echo('<form method="post" action="/vgdc-uci/admin/home.php?p=gen_meetings_set">');
     echo('Date of First Meeting (yyyy-mm-dd): <input type="text" name="start_date"><br>');
     for( $i = 0; $i < $count; $i++ ){
         $value = 'General Meeting';
@@ -43,6 +43,8 @@ function disp_gen_meetings_cp($count){
     echo('</form>');
 }
 
-disp_gen_meetings_cp(NUM_MEETINGS);
+if($_SESSION['loading']){ //this is prequires the user to go through secutiry measures, and prevents using the page directly
+    disp_gen_meetings_cp(NUM_MEETINGS);
+}
 
 ?>
