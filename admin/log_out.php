@@ -4,6 +4,7 @@
 session_unset();
 session_destroy();
 echo('<p>You have logged out</p>');
+include 'login.php';
 /*
 <h3>Logged Out</h3>
 <a href="home.php">Back to Admin Control Pannel</a><br>

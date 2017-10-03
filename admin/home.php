@@ -21,16 +21,12 @@
 include_once '../res/lib.php';
 session_start();
 
-function pw_sql_encrypt($password){
-    return openssl_encrypt($password, 'aes-256-gcm', 'dxT&=_+jXA[q;~/*Uusb}52Y)&z\2YjTCTZ;6RB,');
-}
-
 //the security level tied to all admin functions
 //TODO: make this more secure
 $protection_levels = [ 'gen_meetings_cp' => 9, 
                        'gen_meetings_set' => 9,
-                       'change_password' => 6,
-                       'change_password_set' => 6,
+                       'change_password' => 7,
+                       'change_password_set' => 7,
                        'log_out' => 0 ];
 
 $_SESSION['loading'] = True; //allow pages to function
@@ -38,10 +34,11 @@ $_SESSION['loading'] = True; //allow pages to function
 
 //log-in processing
 if(array_key_exists('user', $_POST)){
+    include_once 'encryption.php';
     $con = sql_connect();
     $stmt = $con->prepare('SELECT username, level FROM admin_login WHERE username = ? and password = ?');
     echo("<!-- MySQL Login Fetch Error: ".$con->error."-->");
-    $stmt->bind_param('ss', $_POST['user'], $_POST['password']);
+    $stmt->bind_param('ss', $_POST['user'], pw_sql_encrypt($_POST['password']));
     $stmt->execute();
     $stmt->bind_result($_SESSION['user'], $_SESSION['level']);
     if(!$stmt->fetch()){
@@ -49,6 +46,7 @@ if(array_key_exists('user', $_POST)){
         unset($_SESSION['user']);
         unset($_SESSION['level']);
     }
+    $stmt->close();
 }
 
 //load exact page
