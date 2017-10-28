@@ -12,6 +12,34 @@ define('NUM_MEETINGS', 10); //the number of general meetings in the quarter
 
 //FUNCTIONS
 
+function int_to_day($i){
+    
+    /* Returns the string representation of the day whose index is give
+       Where 0 is Sunday, 1 is Monday...
+     */
+
+    return date('l',strtotime('Sunday + '.$i.' Days'));
+}
+
+function get_locations($con){
+    
+    /* Returns a list of:
+        [ loc_id => location, ... ]
+       for each location the club has at its disposal
+    */
+
+    $loc_stmt = $con->prepare('SELECT l.loc_id, l.name FROM locations l WHERE 1');
+    echo('<!--'.$con->error.'-->');
+    $loc_stmt->bind_result($loc_id, $loc_name);
+    $loc_stmt->execute();
+    $locations = array();
+    while($loc_stmt->fetch()){
+        $locations[$loc_id] = $loc_name;
+    }
+    $loc_stmt->close();
+    return $locations;
+}
+
 function sql_connect(){
 
     /* Returns a set-up connection to the SQL server
