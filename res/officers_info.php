@@ -8,6 +8,7 @@ include_once 'lib.php';
 
 function disp_officers($con)
 {
+	/*
 	$depart = [
 			0 => 'Administration',
 			1 => 'Outreach',
@@ -17,18 +18,20 @@ function disp_officers($con)
 			12 => 'Art',
 			13 => 'Production',
 			14 => 'Writing',
-			15 => 'Audio'];
+			15 => 'Audio',
+			20 => 'Lab Officer'];
+	*/
 
-	$stmt = $con->prepare("SELECT name, department, img, Title FROM officers ORDER BY department ASC"); 
+	$stmt = $con->prepare("SELECT o.name, d.name, o.img, o.title FROM officers o, depts d WHERE o.department = d.dept_id ORDER BY o.department ASC"); 
     $stmt->execute(); 
-
 
 	$stmt->bind_result($name, $department, $img, $title);
 	$previous = -1;
 	while($stmt->fetch())
 	{
 		if ($previous != $department)
-			echo('<p><div class="header-text"><strong>'.$depart[$department].'</strong></div></p>');
+			//echo('<p><div class="header-text"><strong>'.$depart[$department].'</strong></div></p>');
+			echo('<p><div class="header-text"><strong>'.$department.'</strong></div></p>');
 
 		echo('<div class="ocontent">');
         echo('<div class="content-box-portrait">');

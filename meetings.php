@@ -36,6 +36,9 @@
 
             <div class="meetings">
                 <h3>WORKSHOPS</h3>
+                <!--
+                <p>All workshops are held in the <a  href="./lab.php">Game Lab</a> unless otherwise stated. We expect to begin holding workshops in a new space in ICS2 later this quarter.</p>
+                -->
                 <?php include 'res/workshops.php';?>
             </div>
             </div>

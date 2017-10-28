@@ -27,6 +27,8 @@ $protection_levels = [ 'gen_meetings_cp' => 9,
                        'gen_meetings_set' => 9,
                        'change_password' => 7,
                        'change_password_set' => 7,
+                       'workshops_cp' => 3,
+                       'workshops_set' => 3,
                        'log_out' => 0 ];
 
 $_SESSION['loading'] = True; //allow pages to function
@@ -37,8 +39,11 @@ if(array_key_exists('user', $_POST)){
     include_once 'encryption.php';
     $con = sql_connect();
     $stmt = $con->prepare('SELECT username, level FROM admin_login WHERE username = ? and password = ?');
-    echo("<!-- MySQL Login Fetch Error: ".$con->error."-->");
-    $stmt->bind_param('ss', $_POST['user'], pw_sql_encrypt($_POST['password']));
+    echo('<!-- MySQL Login Fetch Error: '.$con->error.'-->');
+    $pw = pw_sql_encrypt($_POST['password']);
+    $pw = '/pR1jDZ8KQ==';
+    //$stmt->bind_param('ss', $_POST['user'], $pw);
+    $stmt->bind_param('ss', $_POST['user'], $_POST['password']); //comment this line in from direct PW use (no incryption)
     $stmt->execute();
     $stmt->bind_result($_SESSION['user'], $_SESSION['level']);
     if(!$stmt->fetch()){
@@ -47,6 +52,7 @@ if(array_key_exists('user', $_POST)){
         unset($_SESSION['level']);
     }
     $stmt->close();
+    $con->close();
 }
 
 //load exact page
@@ -55,8 +61,11 @@ if(array_key_exists('user', $_SESSION)){
     echo('<h3>using page as '.$_SESSION['user'].'</h3>');
 
     if(array_key_exists('p', $_GET)){
+        echo('<!--page "'.$_GET['p'].'" load started-->');
         include $_GET['p'].'.php';
+        echo('<!--page load successful-->');
     }
+
 
 }else{
     //if not logged in, load login page
