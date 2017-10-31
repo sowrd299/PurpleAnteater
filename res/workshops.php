@@ -11,14 +11,14 @@ include_once 'lib.php';
 function disp_workshops($con){
 
     //echo('<!--TEST: Start 4-->');
-
+    
     //TODO: insert error handling
 
     //set up the prepared statement
     $stmt = $con->prepare("SELECT w.name, d.name, w.start_time, w.end_time, w.weekday, l.name
                            FROM workshops w, depts d, locations l
                            WHERE w.department = d.dept_id and w.location = l.loc_id and w.happeningThisWeek = 1
-                           ORDER BY w.weekday, w.start_time ASC"); 
+                           ORDER BY d.name, w.weekday, w.start_time ASC"); 
     $stmt->execute(); 
 
     //init vars
