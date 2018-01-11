@@ -97,4 +97,20 @@ function smtp_connect(){
 
 }
 
+/* Reformats all paths in a file to be relative to a new folder
+ * $path takes the path from the current dir to the dir it was relative to
+ * returns the new text
+ */
+function change_relative($file_path, $path){
+    $file = fopen($file_path,'r') or "ERROR";
+    if($file == "ERROR"){
+        return ""; //fail quietly
+    }
+    $text = fread($file, filesize($file_path));
+    foreach(array('./','href="',"include '","include_once '") as $pattern){
+        $text = str_replace($pattern, $pattern.$path.'/', $text);
+    }
+    return $text;
+}
+
 ?>
