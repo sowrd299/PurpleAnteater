@@ -36,6 +36,13 @@
         </div>
     </div>
 
+    <div class="dropdown">
+        <a class="dropdown_button">ART STRIKE TEAM</a>
+        <div class="dropdown_content">
+            <a href="https://goo.gl/forms/n0RfxD4nfw4ybDuz1" class="dropdown_link">Request Assets</a>
+        </div>
+    </div>
+
     <?php
     session_start();
     if(array_key_exists('user', $_SESSION)){
