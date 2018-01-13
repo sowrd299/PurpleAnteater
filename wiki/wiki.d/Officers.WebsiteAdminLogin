@@ -1,0 +1,18 @@
+version=pmwiki-2.2.106 ordered=1 urlencoded=1
+agent=Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0
+author=
+charset=ISO-8859-1
+csum=
+ctime=1515852038
+host=84.104.207.118
+name=Officers.WebsiteAdminLogin
+rev=2
+targets=Officers.PostWorkshops
+text=Our website requires officers to login to a hidden admin "Control Panel" page to do things like edit the wiki or [[post workshops]]. Usernames and passwords are currently done by title. Members of the Web Dept. get their own login, as does the president. Everyone else shares the basic "officer" one (login details should be pinned in the Slack somewhere).%0a%0a!!Technical Architecture%0aEach login and admin feature is assigned a "permissions level". Logins can only access features at or bellow their permission level.%0a%0a!!!Wiki%0aPmWiki has its own permissions and password-based login system, which has been left in place. To keep things easy and feeling harmonious, Admin CP automatically enters the wiki password when you log in. Which Wiki password, and correspondingly which permisions you get in the wiki, is set in the Admin Login table of the database. Keep in mind the "name" of the password, not the password itself, is stored, and is then looked up in a dictionary of @@Names => Passwords@@. The wiki's own password login screen is replaced in the wiki config file with a simpler screen telling the user to log in as an officer.
+time=1515852099
+author:1515852099=
+diff:1515852099:1515852038:=1,3c1,3%0a%3c Our website requires officers to login to a hidden admin "Control Panel" page to do things like edit the wiki or [[post workshops]]. Usernames and passwords are currently done by title. Members of the Web Dept. get their own login, as does the president. Everyone else shares the basic "officer" one (login details should be pinned in the Slack somewhere).%0a%3c %0a%3c !!Technical Architecture%0a---%0a> Our website requires officers to login to a hidden admin "Control Panel" page to do things like edit the wiki or post workshops. Usernames and passwords are currently done by title. Members of the Web Dept. get their own login, as does the president. Everyone else shares the basic "officer" one (login details should be pinned in the Slack somewhere).%0a> %0a> !!!Technical Architecture%0a6c6%0a%3c !!!Wiki%0a---%0a> !!Wiki%0a
+host:1515852099=84.104.207.118
+author:1515852038=
+diff:1515852038:1515852038:=1,7d0%0a%3c Our website requires officers to login to a hidden admin "Control Panel" page to do things like edit the wiki or post workshops. Usernames and passwords are currently done by title. Members of the Web Dept. get their own login, as does the president. Everyone else shares the basic "officer" one (login details should be pinned in the Slack somewhere).%0a%3c %0a%3c !!!Technical Architecture%0a%3c Each login and admin feature is assigned a "permissions level". Logins can only access features at or bellow their permission level.%0a%3c %0a%3c !!Wiki%0a%3c PmWiki has its own permissions and password-based login system, which has been left in place. To keep things easy and feeling harmonious, Admin CP automatically enters the wiki password when you log in. Which Wiki password, and correspondingly which permisions you get in the wiki, is set in the Admin Login table of the database. Keep in mind the "name" of the password, not the password itself, is stored, and is then looked up in a dictionary of @@Names => Passwords@@. The wiki's own password login screen is replaced in the wiki config file with a simpler screen telling the user to log in as an officer.%0a\ No newline at end of file%0a
+host:1515852038=84.104.207.118

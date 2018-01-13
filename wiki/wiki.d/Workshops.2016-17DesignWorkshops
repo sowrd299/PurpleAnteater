@@ -1,0 +1,16 @@
+version=pmwiki-2.2.106 ordered=1 urlencoded=1
+agent=Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0
+author=Ryan N Ward
+charset=ISO-8859-1
+csum=Notes from various design workshops
+ctime=1515856584
+host=84.104.207.118
+name=Workshops.2016-17DesignWorkshops
+rev=1
+targets=
+text=Notes from various design workshops:%0a*[[(Attach:)HiddenInfo.pptx]]%0a*[[(Attach:)RuleBookWriting.pptx]]%0a*[[(Attach:)IntroToTableTop.pptx]]%0a*[[(Attach:)MakingLosingFun.pptx]]%0a*[[(Attach:)MVP.pptx]]%0a*[[(Attach:)Playtest.pptx]]%0a*[[(Attach:)TheMagicCircle.pptx]]%0a*[[(Attach:)YourGameAsAnExperience.pptx]]
+time=1515856584
+author:1515856584=Ryan N Ward
+csum:1515856584=Notes from various design workshops
+diff:1515856584:1515856584:=1,9d0%0a%3c Notes from various design workshops:%0a%3c *[[(Attach:)HiddenInfo.pptx]]%0a%3c *[[(Attach:)RuleBookWriting.pptx]]%0a%3c *[[(Attach:)IntroToTableTop.pptx]]%0a%3c *[[(Attach:)MakingLosingFun.pptx]]%0a%3c *[[(Attach:)MVP.pptx]]%0a%3c *[[(Attach:)Playtest.pptx]]%0a%3c *[[(Attach:)TheMagicCircle.pptx]]%0a%3c *[[(Attach:)YourGameAsAnExperience.pptx]]%0a\ No newline at end of file%0a
+host:1515856584=84.104.207.118

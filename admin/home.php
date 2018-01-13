@@ -8,6 +8,8 @@
             background-color : #000000;
             color : #ffffff;
         }
+        a { text-decoration:underline; color:#b6cbf5; }
+        a:hover { text-decoration:underline; color:#f4f5b6; }
     </style>
 
 </head>
@@ -32,7 +34,7 @@ $protection_levels = [ 'gen_meetings_cp' => 9,
                        'log_out' => 0 ];
 
 $_SESSION['loading'] = True; //allow pages to function
-                             //allow admnin must check that this flag is high before doing anthing, as a security measure
+                             //all admnin must check that this flag is high before doing anthing, as a security measure
 
 //log-in processing
 include 'login_set.php';
@@ -65,6 +67,7 @@ if(array_key_exists('level', $_SESSION)){ //if you are loged in, list the pages 
     }
 }
 echo('<br><a href="../home.php">Main Page</a>');
+echo('<br><a href="../wiki/pmwiki.php?n=Officers.Officers">Officer Wiki</a>');
 
 $_SESSION['loading'] = False; //prevent pages from loading out of sequence
 

@@ -1,0 +1,27 @@
+version=pmwiki-2.2.106 ordered=1 urlencoded=1
+agent=Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0
+author=Ryan N Ward
+charset=ISO-8859-1
+csum=
+ctime=1515678217
+host=84.104.207.118
+name=Officers.Officers
+rev=5
+targets=Main.HomePage,Officers.WebsiteAdminLogin,Officers.WikiSyntaxHighlighting,Officers.WikiFileAttachments
+text=This section contains tutorials on how to be an officer!%0a%0aIts just like [[Main/HomePage | the rest of the Wiki]], but with fewer games and more boring stuff!%0a%0a%0a!!Website Tutorials%0a%0aThis website can be a bit weird, heres how you contribute to it!%0a*[[Website Admin Login]]%0a%0a!!!Wiki Tutorials%0aThe club wiki, despite being built into and integrated with the rest of the website, is actually its own piece of software called PmWiki. Because of that, it follows a lot of its own rules. Here are some tutorials on how to edit it:%0a*[[Wiki Syntax Highlighting]]%0a*[[Wiki File Attachments]]
+time=1515854131
+author:1515854131=Ryan N Ward
+diff:1515854131:1515853406:=5d4%0a%3c %0a8a8%0a> %0a
+host:1515854131=84.104.207.118
+author:1515853406=Ryan N Ward
+diff:1515853406:1515851340:=9,12d8%0a%3c *[[Website Admin Login]]%0a%3c %0a%3c !!!Wiki Tutorials%0a%3c The club wiki, despite being built into and integrated with the rest of the website, is actually its own piece of software called PmWiki. Because of that, it follows a lot of its own rules. Here are some tutorials on how to edit it:%0a14c10%0a%3c *[[Wiki File Attachments]]%0a\ No newline at end of file%0a---%0a> *[[Website Admin Login]]%0a\ No newline at end of file%0a
+host:1515853406=84.104.207.118
+author:1515851340=
+diff:1515851340:1515758008:=9,10c9%0a%3c *[[Wiki Syntax Highlighting]]%0a%3c *[[Website Admin Login]]%0a\ No newline at end of file%0a---%0a> *[[Wiki Syntax Highlighting]]%0a\ No newline at end of file%0a
+host:1515851340=84.104.207.118
+author:1515758008=
+diff:1515758008:1515678217:=3,9c3%0a%3c Its just like [[Main/HomePage | the rest of the Wiki]], but with fewer games and more boring stuff!%0a%3c %0a%3c !!Website Tutorials%0a%3c %0a%3c This website can be a bit weird, heres how you contribute to it!%0a%3c %0a%3c *[[Wiki Syntax Highlighting]]%0a\ No newline at end of file%0a---%0a> Its just like [[Main/HomePage | the rest of the Wiki]], but with fewer games and more boring stuff!%0a\ No newline at end of file%0a
+host:1515758008=145.107.73.213
+author:1515678217=Ryan N Ward
+diff:1515678217:1515678217:=1,3d0%0a%3c This section contains tutorials on how to be an officer!%0a%3c %0a%3c Its just like [[Main/HomePage | the rest of the Wiki]], but with fewer games and more boring stuff!%0a\ No newline at end of file%0a
+host:1515678217=195.35.132.2

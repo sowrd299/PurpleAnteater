@@ -1,0 +1,21 @@
+version=pmwiki-2.2.106 ordered=1 urlencoded=1
+agent=Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0
+author=Ryan N Ward
+charset=ISO-8859-1
+csum=
+ctime=1515852583
+host=84.104.207.118
+name=Officers.PostWorkshops
+rev=3
+targets=Officers.WebsiteAdminLogin,Workshops.Workshops,Officers.Department
+text=This website allows all users to [[WebsiteAdminLogin | login]] and edit [[workshops]].%0a%0a!!How To%0aLogin to the Admin CP and go to ''workshops_cp''.%0a%0aSelect you [[department]] and press ''go''.%0a%0aYou will then be given a list of known workshops from your department, and one blank workshop (which can be used to increase the number of workshops your dept has in the database).%0a%0aChange details as need. It is recommended that if you are having a workshop in the same time and place this week as a previous one, but with a different title, you just change the name, instead of adding another workshop into the system (this is why workshops only store day of the week, not date).%0a%0aIf you wish to add multiple brand new workshops to the system, you will need to add them one at a time, sense each load of the page only gives you one new blank workshop.
+time=1515853144
+author:1515853144=Ryan N Ward
+diff:1515853144:1515852630:=4,7c4,7%0a%3c Login to the Admin CP and go to ''workshops_cp''.%0a%3c %0a%3c Select you [[department]] and press ''go''.%0a%3c %0a---%0a> Login to the Admin CP and go to "workshops_cp".%0a> %0a> Select you [[department[[ and press "go".%0a> %0a12c12%0a%3c If you wish to add multiple brand new workshops to the system, you will need to add them one at a time, sense each load of the page only gives you one new blank workshop.%0a\ No newline at end of file%0a---%0a> If you wish to add multiple brand new workshops to the system, you will need to add them one at a time, sense each load of the page only gives you one new black workshop.%0a\ No newline at end of file%0a
+host:1515853144=84.104.207.118
+author:1515852630=Ryan N Ward
+diff:1515852630:1515852583:=1c1%0a%3c This website allows all users to [[WebsiteAdminLogin | login]] and edit [[workshops]].%0a---%0a> This website allows all users to [[WebAdminLogin | login]] and edit [[workshops]].%0a
+host:1515852630=84.104.207.118
+author:1515852583=Ryan N Ward
+diff:1515852583:1515852583:=1,12d0%0a%3c This website allows all users to [[WebAdminLogin | login]] and edit [[workshops]].%0a%3c %0a%3c !!How To%0a%3c Login to the Admin CP and go to "workshops_cp".%0a%3c %0a%3c Select you [[department[[ and press "go".%0a%3c %0a%3c You will then be given a list of known workshops from your department, and one blank workshop (which can be used to increase the number of workshops your dept has in the database).%0a%3c %0a%3c Change details as need. It is recommended that if you are having a workshop in the same time and place this week as a previous one, but with a different title, you just change the name, instead of adding another workshop into the system (this is why workshops only store day of the week, not date).%0a%3c %0a%3c If you wish to add multiple brand new workshops to the system, you will need to add them one at a time, sense each load of the page only gives you one new black workshop.%0a\ No newline at end of file%0a
+host:1515852583=84.104.207.118

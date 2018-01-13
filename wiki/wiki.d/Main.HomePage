@@ -1,0 +1,71 @@
+version=pmwiki-2.2.106 ordered=1 urlencoded=1
+agent=Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0
+author=Ryan N Ward
+charset=ISO-8859-1
+csum=
+host=84.104.207.118
+name=Main.HomePage
+rev=223
+targets=Workshops.Workshops
+text=(:Summary:The home page for the VGDC Wiki!:)%0aWelcome to VGDC's Wiki!%0a%0aThis nifty little corner of our site includes developer resources (such as tutorials and library code) and [[Workshops/ | our workshop archive]].%0a%0aPlease remember this is not meant as a definitive factual knowledge base: plenty of those exist on the web already. Instead, this service is meant to consolidate the game development advice, wisdom and how-to knowledge accumulated over this club's history. Much of it is factual, hopefully at least most of it is useful, but '''not all of it is objective'''.
+time=1515852787
+author:1515852787=Ryan N Ward
+diff:1515852787:1515852772:=6c6%0a%3c Please remember this is not meant as a definitive factual knowledge base: plenty of those exist on the web already. Instead, this service is meant to consolidate the game development advice, wisdom and how-to knowledge accumulated over this club's history. Much of it is factual, hopefully at least most of it is useful, but '''not all of it is objective'''.%0a\ No newline at end of file%0a---%0a> Please remember this is not meant as a definitive factual knowledge base: plenty of those exist on the web already. Instead, this service is meant to consolidate the game development advice, wisdom and how-to knowledge accumulated over this club's history. Much of it is factual, hopefully at least most of it is useful, but not all of it is '''objective'''.%0a\ No newline at end of file%0a
+host:1515852787=84.104.207.118
+author:1515852772=Ryan N Ward
+diff:1515852772:1515851037:=6c6%0a%3c Please remember this is not meant as a definitive factual knowledge base: plenty of those exist on the web already. Instead, this service is meant to consolidate the game development advice, wisdom and how-to knowledge accumulated over this club's history. Much of it is factual, hopefully at least most of it is useful, but not all of it is '''objective'''.%0a\ No newline at end of file%0a---%0a> Please remember this is not meant as a definitive factual knowledge base: plenty of those exist on the web already. Instead, this service is meant to consolidate the game development advice, wisdom and how-to knowledge accumulated over this club's history. Much of it is factual, hopefully at least most of it is useful, but not all of it is objective.%0a\ No newline at end of file%0a
+host:1515852772=84.104.207.118
+author:1515851037=
+diff:1515851037:1515850855:=4,6c4%0a%3c This nifty little corner of our site includes developer resources (such as tutorials and library code) and [[Workshops/ | our workshop archive]].%0a%3c %0a%3c Please remember this is not meant as a definitive factual knowledge base: plenty of those exist on the web already. Instead, this service is meant to consolidate the game development advice, wisdom and how-to knowledge accumulated over this club's history. Much of it is factual, hopefully at least most of it is useful, but not all of it is objective.%0a\ No newline at end of file%0a---%0a> This nifty little corner of our site includes developer resources (such as tutorials and library code) and [[Workshops/ | our workshop archive]].%0a\ No newline at end of file%0a
+host:1515851037=84.104.207.118
+author:1515850855=
+diff:1515850855:1515839780:=4c4,6%0a%3c This nifty little corner of our site includes developer resources (such as tutorials and library code) and [[Workshops/ | our workshop archive]].%0a\ No newline at end of file%0a---%0a> This nifty little corner of our site includes developer resources (such as tutorials and library code) and [[Workshops/ | our workshop archive]].%0a> %0a> It is also the containing structure for our [[Officers/ | administration how-to's]], but most of you can't access those.%0a\ No newline at end of file%0a
+host:1515850855=84.104.207.118
+author:1515839780=
+diff:1515839780:1515757819:=
+host:1515839780=84.104.207.118
+author:1515757819=
+diff:1515757819:1515757378:=6c6,20%0a%3c It is also the containing structure for our [[Officers/ | administration how-to's]], but most of you can't access those.%0a\ No newline at end of file%0a---%0a> It is also the containing structure for our [[Officers/ | administration how-to's]], but most of you can't access those.%0a> %0a> (:source lang=python linenum:)%0a> def func(*args):%0a>   for arg in args:%0a>     print(arg)%0a> (:sourcend:)%0a> %0a> (:source lang=csharp linenum:)%0a> private int _c;%0a> public int c{%0a>   get;%0a>   set;%0a> }%0a> (:sourcend:)%0a\ No newline at end of file%0a
+host:1515757819=145.107.73.213
+author:1515757378=
+diff:1515757378:1515757367:=8c8%0a%3c (:source lang=python linenum:)%0a---%0a> [+(:source lang=python linenum:)%0a12c12%0a%3c (:sourcend:)%0a---%0a> (:sourcend:)+]%0a
+host:1515757378=145.107.73.213
+author:1515757367=
+diff:1515757367:1515757283:=8c8%0a%3c [+(:source lang=python linenum:)%0a---%0a> (:source lang=python linenum:)%0a12c12%0a%3c (:sourcend:)+]%0a---%0a> (:sourcend:)%0a
+host:1515757367=145.107.73.213
+author:1515757283=
+diff:1515757283:1515757124:=8c8%0a%3c (:source lang=python linenum:)%0a---%0a> (:source lang=python:)%0a14c14%0a%3c (:source lang=csharp linenum:)%0a---%0a> (:codestart csharp:)%0a20c20%0a%3c (:sourcend:)%0a\ No newline at end of file%0a---%0a> (:codeend:)%0a\ No newline at end of file%0a
+host:1515757283=145.107.73.213
+author:1515757124=
+diff:1515757124:1515755264:=8c8%0a%3c (:source lang=python:)%0a---%0a> (:codestart python:)%0a12c12%0a%3c (:sourcend:)%0a---%0a> (:codeend:)%0a
+host:1515757124=145.107.73.213
+author:1515755264=
+diff:1515755264:1515754811:=12,19d11%0a%3c (:codeend:)%0a%3c %0a%3c (:codestart csharp:)%0a%3c private int _c;%0a%3c public int c{%0a%3c   get;%0a%3c   set;%0a%3c }%0a
+host:1515755264=145.107.73.213
+author:1515754811=
+diff:1515754811:1515754659:=
+host:1515754811=145.107.73.213
+author:1515754659=
+diff:1515754659:1515754647:=6,12c6%0a%3c It is also the containing structure for our [[Officers/ | administration how-to's]], but most of you can't access those.%0a%3c %0a%3c (:codestart python:)%0a%3c def func(*args):%0a%3c   for arg in args:%0a%3c     print(arg)%0a%3c (:codeend:)%0a\ No newline at end of file%0a---%0a> It is also the containing structure for our [[Officers/ | administration how-to's]], but most of you can't access those.%0a\ No newline at end of file%0a
+host:1515754659=145.107.73.213
+author:1515754647=
+diff:1515754647:1515754600:=6c6,11%0a%3c It is also the containing structure for our [[Officers/ | administration how-to's]], but most of you can't access those.%0a\ No newline at end of file%0a---%0a> It is also the containing structure for our [[Officers/ | administration how-to's]], but most of you can't access those.%0a> (:codestart python:)%0a> def func(*args):%0a>   for arg in args:%0a>     print(arg)%0a> (:codeend:)%0a\ No newline at end of file%0a
+host:1515754647=145.107.73.213
+author:1515754600=
+diff:1515754600:1515754529:=6a7%0a> %0a
+host:1515754600=145.107.73.213
+author:1515754529=
+diff:1515754529:1515754072:=12c12%0a%3c (:codeend:)%0a\ No newline at end of file%0a---%0a> (:codeend)%0a\ No newline at end of file%0a
+host:1515754529=145.107.73.213
+author:1515754072=
+diff:1515754072:1515753505:=
+host:1515754072=145.107.73.213
+author:1515753505=
+diff:1515753505:1515677934:=7,12d6%0a%3c %0a%3c (:codestart python:)%0a%3c def func(*args):%0a%3c   for arg in args:%0a%3c     print(arg)%0a%3c (:codeend)%0a\ No newline at end of file%0a
+host:1515753505=145.107.73.213
+author:1515677934=Ryan N Ward
+diff:1515677934:1515677898:=4,6c4,6%0a%3c This nifty little corner of our site includes developer resources (such as tutorials and library code) and [[Workshops/ | our workshop archive]].%0a%3c %0a%3c It is also the containing structure for our [[Officers/ | administration how-to's]], but most of you can't access those.%0a---%0a> This nifty little corner of our site includes developer resources (such as tutorials and library code) and [[Workshops | our workshop archive]].%0a> %0a> It is also the containing structure for our [[Officers | administration how-to's]], but most of you can't access those.%0a
+host:1515677934=195.35.132.2
+author:1515677898=Ryan N Ward
+diff:1515677898:1400472661:=1,6c1,13%0a%3c (:Summary:The home page for the VGDC Wiki!:)%0a%3c Welcome to VGDC's Wiki!%0a%3c %0a%3c This nifty little corner of our site includes developer resources (such as tutorials and library code) and [[Workshops | our workshop archive]].%0a%3c %0a%3c It is also the containing structure for our [[Officers | administration how-to's]], but most of you can't access those.%0a---%0a> (:Summary:The default home page for the PmWiki distribution:)%0a> Welcome to PmWiki!%0a> %0a> A local copy of PmWiki's%0a> documentation has been installed along with the software,%0a> and is available via the [[PmWiki/documentation index]].  %0a> %0a> To continue setting up PmWiki, see [[PmWiki/initial setup tasks]].%0a> %0a> The [[PmWiki/basic editing]] page describes how to create pages%0a> in PmWiki.  You can practice editing in the [[wiki sandbox]].%0a> %0a> More information about PmWiki is available from [[http://www.pmwiki.org]].%0a
+host:1515677898=195.35.132.2

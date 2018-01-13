@@ -7,6 +7,9 @@
 
     <div class="dropdown">
         <a class="dropdown_button" href="meetings.php">MEETINGS/WORKSHOPS</a>
+        <div class="dropdown_content">
+            <a class="dropdown_link" href="wiki/pmwiki.php?n=Workshops.Workshops">Workshop Archive</a>
+        </div>
     </div>
 
     <div class="dropdown">
@@ -32,7 +35,6 @@
         <div class="dropdown_content">
             <a href="art_resources.php" class="dropdown_link">Art</a>
             <a href="audio_resources.php" class="dropdown_link">Audio</a>
-
         </div>
     </div>
 
@@ -41,6 +43,10 @@
         <div class="dropdown_content">
             <a href="https://goo.gl/forms/n0RfxD4nfw4ybDuz1" class="dropdown_link">Request Assets</a>
         </div>
+    </div>
+
+    <div class="dropdown">
+        <a class="dropdown_button" href="wiki/pmwiki.php">WIKI</a>
     </div>
 
     <?php

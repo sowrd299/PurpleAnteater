@@ -1,0 +1,1 @@
+<?php include './wiki/pmwiki.php' ?>

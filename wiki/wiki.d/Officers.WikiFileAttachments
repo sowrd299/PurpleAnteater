@@ -1,0 +1,18 @@
+version=pmwiki-2.2.106 ordered=1 urlencoded=1
+agent=Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0
+author=Ryan N Ward
+charset=ISO-8859-1
+csum=
+ctime=1515853964
+host=84.104.207.118
+name=Officers.WikiFileAttachments
+rev=2
+targets=
+text=PmWiki supports attaching files to wiki pages, so that readers can download them. This can be very useful for distributing workshop notes, code libraries, example game files, and the such. The full PmWiki documentation is [[http://www.pmwiki.org/wiki/PmWiki/Uploads | here]]. If you want the TLDR, you can edit this page and see how it is implemented. The biggest thing to remember is that first you great the upload link markup, then you save the page, click on the link and select the page you want to upload.%0a%0aExample upload: [[(Attach:)sample.txt]]%0a%0a
+time=1515854170
+author:1515854170=Ryan N Ward
+diff:1515854170:1515853964:=3c3,4%0a%3c Example upload: [[(Attach:)sample.txt]]%0a---%0a> Example upload:%0a> [[(Attach:)loosing.pptx]]%0a
+host:1515854170=84.104.207.118
+author:1515853964=Ryan N Ward
+diff:1515853964:1515853964:=1,5d0%0a%3c PmWiki supports attaching files to wiki pages, so that readers can download them. This can be very useful for distributing workshop notes, code libraries, example game files, and the such. The full PmWiki documentation is [[http://www.pmwiki.org/wiki/PmWiki/Uploads | here]]. If you want the TLDR, you can edit this page and see how it is implemented. The biggest thing to remember is that first you great the upload link markup, then you save the page, click on the link and select the page you want to upload.%0a%3c %0a%3c Example upload:%0a%3c [[(Attach:)loosing.pptx]]%0a%3c %0a
+host:1515853964=84.104.207.118

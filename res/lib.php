@@ -108,7 +108,8 @@ function change_relative($file_path, $path){
     }
     $text = fread($file, filesize($file_path));
     foreach(array('./','href="',"include '","include_once '") as $pattern){
-        $text = str_replace($pattern, $pattern.$path.'/', $text);
+        if(substr($path, -1) != '/') $path = $path.'/'; //add an extra slash when needed
+        $text = str_replace($pattern, $pattern.$path, $text);
     }
     return $text;
 }

@@ -1,0 +1,16 @@
+version=pmwiki-2.2.106 ordered=1 urlencoded=1
+agent=Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0
+author=
+charset=ISO-8859-1
+csum=How to add syntax highlighting to wiki entries
+ctime=1515758504
+host=145.107.73.213
+name=Officers.WikiSyntaxHighlighting
+rev=1
+targets=Officers.WikiSyntaxHighlighting
+text=Our Wiki uses [[http://qbnz.com/highlighter/ | the GeSHI syntax highlighter]]. The Wiki specifically uses a PmWiki wrapper called [[http://www.pmwiki.org/wiki/Cookbook/SourceBlock | SourceBlock]], but you can still access GeSHi itself from other web pages (admittedly, its tucked away in the Wiki folder, but you can still get at it if you want to). Syntax highlight blocks in the wiki look like this:%0a%0a(:source lang=csharp linenum:)%0aprivate int c;%0apublic int c{%0a  get{%0a    c++;%0a    return c;%0a  }%0a}%0a(:sourcend:)%0a%0aYou can see the markup to make that in your own wiki pages by editing the this page, and use this page as a sandbox to play around with it.
+time=1515758504
+author:1515758504=
+csum:1515758504=How to add syntax highlighting to wiki entries
+diff:1515758504:1515758504:=1,13d0%0a%3c Our Wiki uses [[http://qbnz.com/highlighter/ | the GeSHI syntax highlighter]]. The Wiki specifically uses a PmWiki wrapper called [[http://www.pmwiki.org/wiki/Cookbook/SourceBlock | SourceBlock]], but you can still access GeSHi itself from other web pages (admittedly, its tucked away in the Wiki folder, but you can still get at it if you want to). Syntax highlight blocks in the wiki look like this:%0a%3c %0a%3c (:source lang=csharp linenum:)%0a%3c private int c;%0a%3c public int c{%0a%3c   get{%0a%3c     c++;%0a%3c     return c;%0a%3c   }%0a%3c }%0a%3c (:sourcend:)%0a%3c %0a%3c You can see the markup to make that in your own wiki pages by editing the this page, and use this page as a sandbox to play around with it.%0a\ No newline at end of file%0a
+host:1515758504=145.107.73.213

@@ -1,0 +1,18 @@
+version=pmwiki-2.2.106 ordered=1 urlencoded=1
+agent=Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0
+author=Ryan N Ward
+charset=ISO-8859-1
+csum=
+ctime=1515678035
+host=84.104.207.118
+name=Workshops.Workshops
+rev=2
+targets=Workshops.2016-17DesignWorkshops
+text=This section contains an archive of past (and occasionally shortly upcoming) VGDC workshops.%0a%0aSuch as:%0a*[[2016-17 Design Workshops]]
+time=1515855923
+author:1515855923=Ryan N Ward
+diff:1515855923:1515678035:=1,4c1%0a%3c This section contains an archive of past (and occasionally shortly upcoming) VGDC workshops.%0a%3c %0a%3c Such as:%0a%3c *[[2016-17 Design Workshops]]%0a\ No newline at end of file%0a---%0a> This section contains an archive of past (and occasionally shortly upcoming) VGDC workshops.%0a\ No newline at end of file%0a
+host:1515855923=84.104.207.118
+author:1515678035=Ryan N Ward
+diff:1515678035:1515678035:=1d0%0a%3c This section contains an archive of past (and occasionally shortly upcoming) VGDC workshops.%0a\ No newline at end of file%0a
+host:1515678035=195.35.132.2
