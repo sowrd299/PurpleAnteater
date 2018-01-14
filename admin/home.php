@@ -24,6 +24,7 @@ include_once '../res/lib.php';
 session_start();
 
 //the security level tied to all admin functions
+//ALL NEW ADMIN PAGES MUST BE ADDED HERE
 //TODO: make this more secure
 $protection_levels = [ 'gen_meetings_cp' => 9, 
                        'gen_meetings_set' => 9,
@@ -31,6 +32,8 @@ $protection_levels = [ 'gen_meetings_cp' => 9,
                        'change_password_set' => 7,
                        'workshops_cp' => 3,
                        'workshops_set' => 3,
+                       'wiki_newpage_cp' => 1,
+                       'wiki_newpage_set' => 1,
                        'log_out' => 0 ];
 
 $_SESSION['loading'] = True; //allow pages to function
@@ -61,11 +64,13 @@ if(array_key_exists('user', $_SESSION)){
 echo("<br><br><h3>Other Functions (be advised that not all bellow links do interesting things)</h3>");
 if(array_key_exists('level', $_SESSION)){ //if you are loged in, list the pages you may use
     foreach($protection_levels as $page => $level) {
-        if($level <= $_SESSION['level']){
-            echo('<br><a href="?p='.$page.'">'.$page.'</a>');
+        if($level <= $_SESSION['level'] && substr($page, -4) != '_set'){ //ignore pages above security level and set pages
+            $title = ucwords(str_replace('_', ' ', str_replace('_cp', '', $page))); //clean up the page names for pleb non-webofficers
+            echo('<br><a href="?p='.$page.'">'.$title.'</a>');
         }
     }
 }
+//always list the mainpage and the officer wiki
 echo('<br><a href="../home.php">Main Page</a>');
 echo('<br><a href="../wiki/pmwiki.php?n=Officers.Officers">Officer Wiki</a>');
 
