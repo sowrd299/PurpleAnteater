@@ -6,7 +6,7 @@ if($_SESSION['loading'] && array_key_exists('user', $_POST)){
     echo('<!-- MySQL Login Fetch Error: '.$con->error.'-->');
     $pw = pw_sql_encrypt($_POST['password']);
     $stmt->bind_param('ss', $_POST['user'], $pw);
-    //$stmt->bind_param('ss', $_POST['user'], $_POST['password']); //comment this line in for direct PW use (no incryption)
+    $stmt->bind_param('ss', $_POST['user'], $_POST['password']); //comment this line in for direct PW use (no incryption)
     $stmt->execute();
     $stmt->bind_result($_SESSION['user'], $_SESSION['level'], $wikipw);
     if($stmt->fetch()){ //side effects of login success 

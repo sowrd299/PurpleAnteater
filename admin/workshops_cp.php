@@ -3,23 +3,27 @@
 
 /*
 WORKSHOP FORMAT:
+            [
              'title' =>,
              'day' =>, //string of int representation, e.g. '1'
              'from' =>,
              'to' =>,
              'happening' =>,
-             'location' => //integer location id
-             ]
+             'location' =>, //integer location id
+             'hosts' => //list of host's officer id's
+             'joints' => //list of other involved dept id's
+            ]
 */
 include_once '../res/lib.php';
 
-function disp_workshop_form($name, $workshop, $locations){
+function disp_workshop_form($name, $workshop, $locations, $hosts, $other_depts){
     /* Echos out a from stub for editing a single workshop.
     name is a code-only unique identifier for the workshop
     location is a list of all locations where the workshop may be held
+    hosts is a list of officers who could host it
+    other depts is a list of depts that coould also be involved
     */
     echo('
-    <br>
     <div class = "workshop"> 
         Title:<input name="'.$name.'_title" type="text" value="'.$workshop['title'].'" size="35"/><br>
         Day:<select name="'.$name.'_day">');
@@ -52,7 +56,9 @@ function disp_workshop_form($name, $workshop, $locations){
 
 function disp_workshops_cp($dept_id, $con){
     //setup
-    $locations = get_locations($con); //this has to come first to avoid concurancy
+    $locations = get_locations($con); //this has to come first to avoid concurancy in the db connections
+    $hosts = //TODO
+    $other_depts = //TODO
     $name = 0;
     $stmt = $con->prepare('SELECT w.name, w.start_time, w.end_time, w.weekday, w.location , w.happeningThisWeek FROM workshops w WHERE w.department = ?');
     $stmt->bind_param('i', $dept_id);
@@ -71,9 +77,12 @@ function disp_workshops_cp($dept_id, $con){
             'to' => $to,
             'day' => $day,
             'happening' => $happening,
-            'location' => $location
+            'location' => $location,
+            'hosts' => [], 
+            'joints' => [],
             ];
-        disp_workshop_form($name, $ws, $locations);
+        echo('<br>');
+        disp_workshop_form($name, $ws, $locations, $hosts, $other_depts);
         $name++;
     }
     //print a form for a new workshop
@@ -82,7 +91,9 @@ function disp_workshops_cp($dept_id, $con){
                                'to' => '14:00:00',
                                'day' => '1',
                                'happening' => 'delete',
-                               'location' => 0], $locations);
+                               'location' => 0,
+                               'hosts' => [],
+                               'joints' => []], $locations);
     //cleanup
     echo('<input name="count" type="hidden" value="'.($name+1).'"/>');
     echo('<br><input type="submit" value="Submit"/>');

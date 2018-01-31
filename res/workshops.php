@@ -44,7 +44,7 @@ function disp_workshops($con){
             //today's workshops
             echo('font-weight: bold;');
         }
-        //future meetings recieve not special formatting
+        //past and future workshops recieve no special formatting
 		echo('"><span>'.$department.': '.$name.'</span></br>');
         echo('<span>'.date('l',strtotime('Sunday + '.$weekday.' Days')).' from '.date('g:i',strtotime($start_time)).' to '.date('g:i',strtotime($end_time)));
         echo(' in '.$location);

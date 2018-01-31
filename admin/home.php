@@ -30,6 +30,8 @@ $protection_levels = [ 'gen_meetings_cp' => 9,
                        'gen_meetings_set' => 9,
                        'change_password' => 7,
                        'change_password_set' => 7,
+                       'game_uploads_cp' => 4,
+                       'game_uploads_set' => 4,
                        'workshops_cp' => 3,
                        'workshops_set' => 3,
                        'wiki_newpage_cp' => 1,
@@ -61,6 +63,7 @@ if(array_key_exists('user', $_SESSION)){
 }
 
 //list available pages
+echo('<div class="admin_funcs">');
 echo("<br><br><h3>Other Functions (be advised that not all bellow links do interesting things)</h3>");
 if(array_key_exists('level', $_SESSION)){ //if you are loged in, list the pages you may use
     foreach($protection_levels as $page => $level) {
@@ -73,6 +76,7 @@ if(array_key_exists('level', $_SESSION)){ //if you are loged in, list the pages 
 //always list the mainpage and the officer wiki
 echo('<br><a href="../home.php">Main Page</a>');
 echo('<br><a href="../wiki/pmwiki.php?n=Officers.Officers">Officer Wiki</a>');
+echo('</div>');
 
 $_SESSION['loading'] = False; //prevent pages from loading out of sequence
 
