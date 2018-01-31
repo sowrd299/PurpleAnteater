@@ -9,6 +9,7 @@ echo('<!--TEST: Lib Included -->');
 //CONSTANTS
 
 define('NUM_MEETINGS', 10); //the number of general meetings in the quarter
+$GAMES_FOLDER = './uploads/games/';
 
 //FUNCTIONS
 
@@ -107,10 +108,11 @@ function change_relative($file_path, $path){
         return ""; //fail quietly
     }
     $text = fread($file, filesize($file_path));
-    foreach(array('./','href="',"include '","include_once '") as $pattern){
-        if(substr($path, -1) != '/') $path = $path.'/'; //add an extra slash when needed
+    if(substr($path, -1) != '/') $path = $path.'/'; //add an extra slash when needed
+    foreach(array('./','href="',"include '","include_once '") as $pattern){ //uses these patterns to find paths. Super robust, I know
         $text = str_replace($pattern, $pattern.$path, $text);
     }
+    $text = str_replace($path.'http', 'http', $text); //a super inefficent and ineffective way to unalter non-local paths
     return $text;
 }
 
