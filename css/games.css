@@ -1,0 +1,43 @@
+/*game link is based on the code for the bar buttons, if it wasn't obvious*/
+.game_link{
+    margin: 10px 8px;
+    padding: 4px 16px;
+    background: #8bb0f9;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.game_link:hover{
+    background: #6496F5;
+}
+
+/*this is a class for titles within the more arcadish games section:*/
+.game_title{
+    color: #ff93f6;
+    display: inline;
+    /*display: flex;
+    float: left;*/
+    font-size: 40px;
+    padding: 4px;
+}
+
+/*a little div for game titles, info and the such*/
+.game_info{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 1200px); /*taking up all the space but that needed for the game*/
+}
+
+/*this is for actual embed games*/
+.game{
+    /*rough max diemension of a unity game*/
+    min-width:1200px;
+    height:700px;
+    border-width:0px; /*remove the iframe border*/
+    display: inline-block;
+}

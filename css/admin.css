@@ -1,0 +1,25 @@
+body{
+    background-color : #000000;
+    color : #ffffff;
+    line-height: 200%;
+}
+
+a { text-decoration:underline; color:#b6cbf5; }
+a:hover { text-decoration:underline; color:#f4f5b6; }
+
+form {
+    display: inline-block;
+    border: solid;
+    border-width: 2px;
+    border-color: #ffffff;
+    padding: 16px;
+    margin: 8px;
+}
+
+.form_section{
+    border-bottom: solid;
+    border-bottom-color: #ffffff;
+    border-bottom-width: 2px;
+    padding: 4px;
+    margin: 4px;
+}

@@ -2,15 +2,8 @@
 <html>
 <head>
 
+    <link rel="stylesheet" type="text/css" href="../css/admin.css">
     <title>VGDC Website Admin</title>
-    <style>
-        body{
-            background-color : #000000;
-            color : #ffffff;
-        }
-        a { text-decoration:underline; color:#b6cbf5; }
-        a:hover { text-decoration:underline; color:#f4f5b6; }
-    </style>
 
 </head>
 

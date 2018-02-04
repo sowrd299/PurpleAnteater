@@ -1,4 +1,5 @@
 <link rel="stylesheet" type="text/css" href="css/bar.css"> 
+<link rel="icon" href="img/vgdc_logo_icon.png"> <!--this really doesn't belong here, but I didn't have the forsight to make a proper header-->
 
 <div class="bar">
     <div class="dropdown">

@@ -13,21 +13,49 @@ $GAMES_FOLDER = './uploads/games/';
 
 //FUNCTIONS
 
+/* Returns the string representation of the day whose index is give
+ *  Where 0 is Sunday, 1 is Monday...
+ */
 function int_to_day($i){
-    
-    /* Returns the string representation of the day whose index is give
-       Where 0 is Sunday, 1 is Monday...
-     */
-
     return date('l',strtotime('Sunday + '.$i.' Days'));
 }
 
+/* The inverse of int_to_day
+ * NOTE: hasn't actually been tested
+ */
+function day_to_int($d){
+    return date('w',strtotime($d));
+}
+
+/* Flip a 2D array diagnolly
+ */
+function array_transpose($array) {
+    $r = array();
+    foreach($array as $k => $v){
+        foreach($v as $k1 => $v1){
+            if(!isset($r[$k1])) $r[$k1] = array();
+            $r[$k1][$k] = $v1;
+        }
+    }
+    return $r;
+}
+
+/* A more aggressive tokenizer than explose
+ * supports multiple delimeters, and removes whitespace around words
+ */
+function tokenize($str, $delims){
+    foreach($delims as $delim){ //standardize all delimiters
+        $str = str_replace($delim, $delims[0], $str);
+    }
+    $strs = explode($delims[0], $str); //break on delimiters
+    return array_map('trim', $strs); //clean off whitespace
+}
+
+/* Returns a list of:
+ *  [ loc_id => location, ... ]
+ * for each location the club has at its disposal
+ */
 function get_locations($con){
-    
-    /* Returns a list of:
-        [ loc_id => location, ... ]
-       for each location the club has at its disposal
-    */
 
     $loc_stmt = $con->prepare('SELECT l.loc_id, l.name FROM locations l WHERE 1');
     echo('<!--'.$con->error.'-->');
@@ -39,12 +67,31 @@ function get_locations($con){
     }
     $loc_stmt->close();
     return $locations;
+
 }
 
-function sql_connect(){
+/* Returns a list of:
+ *  [ dept_id => department, ... ]
+ * for each department in the club
+ */
+function get_departments($con){
 
-    /* Returns a set-up connection to the SQL server
-     */
+    $dept_stmt = $con->prepare('SELECT d.dept_id, d.name FROM depts d WHERE 1');
+    echo('<!--'.$con->error.'-->');
+    $dept_stmt->bind_result($dept_id, $dept_name);
+    $dept_stmt->execute();
+    $depts = array();
+    while($dept_stmt->fetch()){
+        $depts[$dept_id] = $dept_name;
+    }
+    $dept_stmt->close();
+    return $depts;
+
+}
+
+/* Returns a set-up connection to the SQL server
+ */
+function sql_connect(){
       
     $server = "localhost"; //assumes webserver and sql share a db
     $user = "vgdc";
@@ -62,10 +109,9 @@ function sql_connect(){
 
 }
 
+/* Returns a set-up SMTP (email) connection.
+ */
 function smtp_connect(){
-
-    /* Returns a set-up SMTP (email) connection.
-     */
 
     date_default_timezone_set('Etc/UTC');
 

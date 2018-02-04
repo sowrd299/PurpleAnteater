@@ -106,22 +106,19 @@ if($_SESSION['loading']){
     $con = sql_connect();
     //dept select
     //TODO: make this section a reusable, freestanding file
-    $stmt = $con->prepare('SELECT d.dept_id, d.name FROM depts d WHERE 1');
-    $stmt->bind_result($dept_id, $dept_name);
-    $stmt->execute();
+    $depts = get_departments($con);
     echo('
     <form method="get" action="?">
     <input type="hidden" name="p" value="workshops_cp">
     <select name="dept">
     ');
-    while($stmt->fetch()){
+    foreach($depts as $dept_id => $dept_name){
         echo('<option value="'.$dept_id.'"'.($dept_id == $_GET['dept']? 'selected' : '').'>'.$dept_name.'</option>');
     }
     echo('
     <input type="submit" value="Go"/>
     </form>
     ');
-    $stmt->close();
     //the control panel itself
     if(isset($_GET['dept'])){
         echo('
