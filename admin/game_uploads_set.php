@@ -50,8 +50,9 @@ function save_game($con, $title, $game, $about, $path, $replace_ok = false){
     $zip = new ZipArchive;
     if($zip->open($game['tmp_name'])){
 
-        $folder = substr($zip->getNameIndex(0),0,-1); //gets the name of the first thing in root (in theory, the folder with the rest of the game)
-                                                      //removes the last char; presumably a /
+        //gets the name of the root folder from the begining of the path to the first item in the zip
+        $folder = strstr($zip->getNameIndex(0),'/',true); 
+
         echo('<!--Found game folder: '.$folder.'-->');
         $full_path = $path.'/'.$folder; //the path to the game folder after it is extracted
 
