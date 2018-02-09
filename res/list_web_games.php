@@ -5,10 +5,12 @@
  */
 
 /* Displays a single game that could be played
- * NOTE: if you update how games are displayed, you will need to update this HTML
+ * includes a tool tip with a brief description of the game
  */
-function disp_game_link($name, $id){
-    echo('<a href="./games.php?game='.$id.'" class="game_link">'.$name.'</a>');
+function disp_game_link($name, $id, $about){
+    echo('<a href="./games.php?game='.$id.'" class="game_link">'.$name.
+            '<span class="game_link_tip"><strong>'.$name.'</strong> '.substr($about,0,100).'...</span>
+          </a>');
 }
 
 /* To be called before a list of games
@@ -27,14 +29,14 @@ function end_games(){
  */
 function disp_recent_games($con, $number){
     //setup and run a SQL select querry
-    $stmt = $con->prepare('SELECT g.title, g.id FROM game_uploads g ORDER BY g.date DESC LIMIT ?;');
+    $stmt = $con->prepare('SELECT g.title, g.id, g.about FROM game_uploads g ORDER BY g.date DESC LIMIT ?;');
     echo('<!--SQL Error: '.$con->error.'-->');
     $stmt->bind_param('i', $number);
     $stmt->execute();
-    $stmt->bind_result($title,$id);
+    $stmt->bind_result($title,$id,$about);
     //display the results
     while($stmt->fetch()){
-        disp_game_link($title, $id);
+        disp_game_link($title, $id,$about);
     }
     //cleanup
     $stmt->close();
@@ -48,7 +50,7 @@ function disp_recent_games($con, $number){
 function disp_searched_games($con, $terms, $number = 30, $exclude = ''){
     $found = false; //tracks if we found anything
     //set up the search
-    $stmt = $con->prepare('SELECT g.title, g.id
+    $stmt = $con->prepare('SELECT g.title, g.id, g.about
                            FROM game_uploads g 
                            WHERE (NOT g.id = ?) AND
                            MATCH(title, about, folder)
@@ -60,11 +62,11 @@ function disp_searched_games($con, $terms, $number = 30, $exclude = ''){
     echo('<!--SQL Error: '.$con->error.'-->');
     $stmt->bind_param('ssi', $exclude, $terms, $number);
     $stmt->execute();
-    $stmt->bind_result($title,$id);
+    $stmt->bind_result($title,$id,$about);
     //display the results
     while($stmt->fetch()){
         $found = true;
-        disp_game_link($title, $id);
+        disp_game_link($title, $id, $about);
     }
     //cleanup
     $stmt->close();

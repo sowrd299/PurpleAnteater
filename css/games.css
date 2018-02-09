@@ -1,3 +1,7 @@
+.game_list{
+    line-height: 215%; /*account for height of the buttons*/
+}
+
 /*game link is based on the code for the bar buttons, if it wasn't obvious*/
 .game_link{
     margin: 10px 8px;
@@ -10,10 +14,40 @@
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    position: relative;
 }
 
 .game_link:hover{
     background: #6496F5;
+}
+
+/*this is for the tool-tip when
+ * a user hovers over the game */
+.game_link_tip{
+    /*make it "float"*/
+    visibility: hidden;
+    box-shadow: 4px 8px 16px 4px rgba(0,0,0,0.3);
+    position: absolute;
+    bottom: 50px;
+    left: -20px;
+    z-index: 1;
+    /*size*/
+    width: 300px;
+    /*padding and border*/
+    background-color: #e0e0e0;/* rgb(58, 88, 145);*/
+    padding: 6px 4px;
+    border-radius: 5px;
+    border: solid;
+    border-width: 4px;
+    border-color: #ff93f6;
+    /*text*/
+    color: #000;
+    font-weight: normal;
+    line-height: 115%;
+}
+
+.game_link:hover .game_link_tip{
+    visibility: visible;
 }
 
 /*this is a class for titles within the more arcadish games section:*/

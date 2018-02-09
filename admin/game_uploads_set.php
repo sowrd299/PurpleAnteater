@@ -6,6 +6,7 @@ include_once '../res/lib.php'; //get $GAMES_FOLDER
 
 /* Records that a game was uploaded and to what folder in the database
  * automatically generates an ID, and assumes the 
+ * returns the ID
  */
 function record_game_upload($con, $title, $folder, $about){
     //do some cleaning
@@ -25,11 +26,14 @@ function record_game_upload($con, $title, $folder, $about){
     //wrap-up and clean-up
     $stmt->execute();
     $stmt->close();
+
+    return $id;
 }
 
 
 /* Uploads a game file. Takes the title of the game, and its about page.
  * and if it is okay to replace previous uploads with that name
+ * returns the ID
  */
 function save_game($con, $title, $game, $about, $path, $replace_ok = false){
 
@@ -76,8 +80,7 @@ function save_game($con, $title, $game, $about, $path, $replace_ok = false){
         //extract and save the game
         if($zip->extractTo($path)){ //preform the extraction
             echo('<p>'.$title.' has been uploaded.</p>');
-            record_game_upload($con, $title, $folder, $about); //record it in the database
-            return true; //SUCCESSFUL EXIT POINT
+            return record_game_upload($con, $title, $folder, $about); //record it in the database
         }
         $zip->close();
     }
@@ -99,10 +102,12 @@ if($_SESSION['loading']){
     $con = sql_connect();
     $path = '../'.$GAMES_FOLDER; //use ../ to escape /admin/
     //go actually do the things
-    if(!save_game($con, $_POST['title'], $_FILES['gameFile'],
+    if($id = save_game($con, $_POST['title'], $_FILES['gameFile'],
             $_POST['about'], $path, isset($_POST['replace']))){ //'replace' is set iff the box was checked
+        echo('<a href="../games?game='.$id.'>Check out your game here!</a>');
+    }else{
         include 'game_uploads_cp.php'; //if it fails, include the form again
-    } 
+    }
     //cleanup
     $con->close();
 }
