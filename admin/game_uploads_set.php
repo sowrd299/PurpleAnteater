@@ -40,7 +40,7 @@ function save_game($con, $title, $game, $about, $path, $replace_ok = false){
     $extension = strtolower(pathinfo($game['name'],PATHINFO_EXTENSION));
 
     //check file size, so we don't get bombed.... as easily
-    if($game['size'] > 500000){
+    if($game['size'] > 50000000){
         echo('<p>The game is too large. Please contact the Webmaster.</p>');
         return;
     }
